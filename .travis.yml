@@ -14,3 +14,7 @@ script:
     # Run (or create) a container from webapp:test docker image
     # Bind nuget packages directory
     - docker run -it --rm -v ~/.nuget/packages:/root/.nuget/packages webapp:test
+
+cache:
+    directories:
+        - ~/.nuget/packages
