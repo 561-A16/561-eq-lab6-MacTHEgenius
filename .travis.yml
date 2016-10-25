@@ -15,6 +15,7 @@ script:
     # Bind nuget packages directory
     - docker run -it --rm -v ~/.nuget/packages:/root/.nuget/packages webapp:test
 
+# Caches Nuget packages
 cache:
     directories:
         - ~/.nuget/packages
