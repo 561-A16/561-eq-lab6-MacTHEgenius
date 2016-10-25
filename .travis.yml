@@ -1,0 +1,6 @@
+# Build a docker image named webapp:test from a docker file placed in ./docker directory.
+docker build -t webapp:test -f ./docker/Dockerfile .
+
+# Run (or create) a container from webapp:test docker image
+# Bind nuget packages directory
+docker run -it --rm -v ~/.nuget/packages:/root/.nuget/packages webapp:test
